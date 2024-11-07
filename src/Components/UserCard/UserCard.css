@@ -7,14 +7,17 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
   /* background-color: var(--background-color9); */
-  outline: 1px solid var(--background-color5);
+  border: 1px solid var(--background-color5);
   transition: transform 0.5s;
   cursor: default;
 }
 
+a {
+  border: none;
+}
 .userCard:hover {
   transform: scale(1.05);
-  outline: 2px solid var(--background-color5);
+  border: 2px solid var(--background-color5);
 }
 .leftUserInfo {
   background-color: var(--background-color2);
