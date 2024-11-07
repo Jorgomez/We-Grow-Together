@@ -5,20 +5,16 @@
 }
 
 .hero-text {
-  /* border: 1px solid; */
   font-family: var(--hero-font-family);
   width: 400px;
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.533);
   font-weight: 400;
   transform: rotate(270deg);
-  margin-top: 250px;
-  margin-bottom: 2%;
+  margin-top: 150px;
   transform-origin: center;
   line-height: 0.8;
-
-  /* Sombra para efecto 3D */
   text-shadow: 5px 5px 15px rgba(188, 177, 177, 0.936);
 }
 @media (max-width: 900px) {

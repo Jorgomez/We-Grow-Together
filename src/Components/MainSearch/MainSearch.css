@@ -18,6 +18,7 @@
   border-bottom-right-radius: var(--border-radius-l);
   border: 1px solid rgba(255, 255, 255, 0.52);
   transition: box-shadow 0.3s ease;
+  background-color: transparent;
 }
 
 @media (max-width: 850px) {
