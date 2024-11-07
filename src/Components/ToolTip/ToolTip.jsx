@@ -1,6 +1,6 @@
 import React, { useState, cloneElement } from 'react'
 import ReactDOM from 'react-dom'
-import './Tooltip.css'
+import './ToolTip.css'
 
 const Tooltip = ({ text, children }) => {
   const [isVisible, setIsVisible] = useState(false)
