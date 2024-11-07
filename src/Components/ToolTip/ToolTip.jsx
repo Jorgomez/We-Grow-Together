@@ -1,4 +1,4 @@
-import React, { useState, cloneElement } from 'react'
+import React, { useState, cloneElement, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import './ToolTip.css'
 
@@ -13,9 +13,24 @@ const Tooltip = ({ text, children }) => {
 
   const hideTooltip = () => setIsVisible(false)
 
+  useEffect(() => {
+    const handleTouchOutside = (event) => {
+      if (!event.target.closest('.tooltipText')) {
+        setIsVisible(false)
+      }
+    }
+
+    document.addEventListener('touchstart', handleTouchOutside)
+    return () => {
+      document.removeEventListener('touchstart', handleTouchOutside)
+    }
+  }, [])
+
   const childWithEvents = cloneElement(children, {
     onMouseEnter: showTooltip,
-    onMouseLeave: hideTooltip
+    onMouseLeave: hideTooltip,
+    onTouchStart: showTooltip,
+    onTouchEnd: hideTooltip
   })
 
   return (
