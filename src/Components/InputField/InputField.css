@@ -9,8 +9,8 @@ label {
   font-size: 13px;
   color: var(--text-color6);
 }
-.inputCont .input {
-  border-radius: var(--border-radius-s);
+.inputCont.input {
+  /* border-radius: var(--border-radius-s); */
   padding: var(--spacing-s);
   border: 1px solid #ccc;
   font-size: var(--font-size-ml);
