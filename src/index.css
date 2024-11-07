@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Big+Shoulders+Inline+Display:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+:root {
+  --background-color1: rgba(128, 128, 128, 0.406);
+  --background-color2: #274f6ad8;
+  --background-color3: white;
+  --background-color4: #ff990063;
+  --background-color5: rgba(245, 245, 245, 0.465);
+  --background-color6: aliceblue;
+  --background-color7: #888084a5;
+  --background-color8: #d9d9d9;
+  --background-color9: #f6f6f6;
+
+  --text-color1: #ffffff;
+  --text-color2: black;
+  --text-color3: rgba(240, 248, 255, 0.721);
+  --text-color4: rgba(240, 248, 255, 0.567);
+  --text-color5: antiquewhite;
+  --text-color6: #333;
+
+  --main-font-family: 'Montserrat', sans-serif;
+  --h-1-2-font-family: 'Annie Use Your Telescope', cursive;
+  --hero-font-family: 'Big Shoulders Inline Display', sans-serif;
+  --spacing-xs: 3px;
+  --spacing-s: 5px;
+  --spacing-m: 10px;
+  --spacing-ml: 15px;
+  --spacing-l: 20px;
+  --spacing-xl: 30px;
+  --spacing-xxl: 40px;
+  --spacing-big: 60px;
+
+  --font-size-s: 5px;
+  --font-size-m: 10px;
+  --font-size-ml: 15px;
+  --font-size-l: 20px;
+  --font-size-xl: 30px;
+  --font-size-xxl: 40px;
+  --font-size-big: 60px;
+
+  --border-radius-s: 10px;
+  --border-radius-m: 15px;
+  --border-radius-l: 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--main-font-family);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  /* background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1730928715/pawel-czerwinski-zLqn9F9JsIA-unsplash_vvwiwr.webp'); */
+  /* background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1727099077/project10/posters/tt9mqiah8x7nlcoxzrwo.jpg'); */
+  background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1727098638/project10/posters/cfncenwtkxmxtg5zc8f1.jpg');
+  background-size: cover;
+  position: relative;
+}
+
+.home,
+.authPage,
+.skillsPool,
+.favorites {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  min-height: 80svh;
+  z-index: 2;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.381);
+  z-index: 1;
+}
+header {
+  z-index: 9;
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+a {
+  color: inherit;
+}

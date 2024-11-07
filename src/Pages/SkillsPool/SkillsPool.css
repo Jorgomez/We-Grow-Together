@@ -1,0 +1,22 @@
+.skillsPool {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--spacing-xl);
+}
+.skillsPool > h2 {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  color: var(--background-color3);
+  font-family: var(--hero-font-family);
+  font-weight: 600;
+  font-size: 50px;
+}
+.userCardsCont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 25px 0px 0px 0px;
+  min-height: 70svh;
+}

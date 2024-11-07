@@ -1,0 +1,89 @@
+.inputCont {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  align-items: center;
+  justify-content: center;
+}
+label {
+  font-size: 13px;
+  color: var(--text-color6);
+}
+.inputCont .input {
+  border-radius: var(--border-radius-s);
+  padding: var(--spacing-s);
+  border: 1px solid #ccc;
+  font-size: var(--font-size-ml);
+  transition: box-shadow 0.3s ease;
+  background-color: #f9f9f9b5;
+  height: 100%;
+}
+.inputCont .input::placeholder {
+  color: #99999981;
+  font-style: italic;
+  font-size: 13px;
+}
+.mainSearch .input {
+  padding: var(--spacing-s);
+  border-top-left-radius: var(--border-radius-l);
+  border-bottom-left-radius: var(--border-radius-l);
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: box-shadow 0.3s ease;
+  background-color: #f9f9f9b5;
+  height: 100%;
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.659);
+  border-color: #007bff;
+}
+
+input[type='file'] {
+  width: 200px;
+  color: #99999981;
+  font-style: italic;
+}
+input[type='file']::-webkit-file-upload-button {
+  /* background: linear-gradient(100deg, #40585e, #2193b0); */
+  background: linear-gradient(100deg, #355e3b, #4b6f44, #7c9d70);
+  color: white;
+  border: none;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 80px;
+}
+
+input[type='file']::-webkit-file-upload-button:hover {
+  background: linear-gradient(100deg, #2193b0, #245497);
+}
+
+input[type='file']::-moz-file-upload-button {
+  background: linear-gradient(100deg, #40585e, #2193b0);
+  color: white;
+  border: none;
+  padding: 10px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type='file']::-moz-file-upload-button:hover {
+  background: linear-gradient(100deg, #355e3b, #4b6f44, #7c9d70);
+}
+
+@media (max-width: 600px) {
+  label {
+    font-size: var(--font-size-m);
+  }
+  .inputCont .input {
+    font-size: 13px;
+  }
+  .inputCont .input::placeholder {
+    font-size: 10px;
+  }
+}
