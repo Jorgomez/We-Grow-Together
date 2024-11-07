@@ -9,7 +9,7 @@ label {
   font-size: 13px;
   color: var(--text-color6);
 }
-.inputCont.input {
+.inputCont .input {
   /* border-radius: var(--border-radius-s); */
   padding: var(--spacing-s);
   border: 1px solid #ccc;
@@ -79,6 +79,17 @@ input[type='file']::-moz-file-upload-button:hover {
 @media (max-width: 600px) {
   label {
     font-size: var(--font-size-m);
+  }
+  .inputCont .input {
+    font-size: 13px;
+  }
+  .inputCont .input::placeholder {
+    font-size: 10px;
+  }
+}
+@media (max-width: 380px) {
+  label {
+    font-size: 11px;
   }
   .inputCont .input {
     font-size: 13px;
