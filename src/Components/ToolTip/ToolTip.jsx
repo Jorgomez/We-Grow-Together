@@ -13,18 +13,18 @@ const Tooltip = ({ text, children }) => {
 
   const hideTooltip = () => setIsVisible(false)
 
-  useEffect(() => {
-    const handleTouchOutside = (event) => {
-      if (!event.target.closest('.tooltipText')) {
-        setIsVisible(false)
-      }
-    }
+  // useEffect(() => {
+  //   const handleTouchOutside = (event) => {
+  //     if (!event.target.closest('.tooltipText')) {
+  //       setIsVisible(false)
+  //     }
+  //   }
 
-    document.addEventListener('touchstart', handleTouchOutside)
-    return () => {
-      document.removeEventListener('touchstart', handleTouchOutside)
-    }
-  }, [])
+  //   document.addEventListener('touchstart', handleTouchOutside)
+  //   return () => {
+  //     document.removeEventListener('touchstart', handleTouchOutside)
+  //   }
+  // }, [])
 
   const childWithEvents = cloneElement(children, {
     onMouseEnter: showTooltip,
