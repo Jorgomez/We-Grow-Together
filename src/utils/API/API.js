@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:3000'
+const baseURL = 'https://project-13-backend.vercel.app/'
 
 export const API = async ({
   endpoint,
