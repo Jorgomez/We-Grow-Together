@@ -6,6 +6,7 @@
   height: 100vh;
   position: relative;
   z-index: 1000;
+  /* left: 45%; */
 }
 
 .spinner {
@@ -28,14 +29,15 @@
 
 .loadingContainer p {
   margin-top: 10px;
-  font-size: 18px;
-  color: whitesmoke;
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
 }
 /* Styles for incremental loading */
 .incrementalLoading {
   margin-top: 10px;
   font-size: 16px;
-  color: whitesmoke;
+  color: rgb(245, 245, 245);
   text-align: center;
 }
 

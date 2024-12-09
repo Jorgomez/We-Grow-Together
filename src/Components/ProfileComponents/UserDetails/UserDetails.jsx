@@ -63,7 +63,7 @@ export const UserDetails = ({ currentUser }) => {
         errors={errors}
         errorClassname='errorMessageProfile'
         inputName='name'
-        value={defaultValues.name}
+        value={currentUser?.user.name}
         {...register('name', validationName)}
       />
       <InputField

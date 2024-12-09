@@ -13,6 +13,7 @@ import { useCreateSkillReq } from '../../../utils/Functions/requestHandlers/crea
 import { background } from '@chakra-ui/react'
 import { SkillRequestModal } from '../../CreatedSkillReqModal/CreatedSkillReqModal'
 import Tooltip from '../../ToolTip/ToolTip'
+import { Loading } from '../../Loading/Loading'
 
 export const CreateSkillRequest = ({ currentUser }) => {
   const {
@@ -25,10 +26,13 @@ export const CreateSkillRequest = ({ currentUser }) => {
   const { submitCreateSkillReq } = useCreateSkillReq()
   const [skillRequest, setSkillRequest] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const submit = async (data) => {
     // await submitUpdated(data)
+    setLoading(true)
     const newSkillRequest = await submitCreateSkillReq(data)
+    setLoading(false)
     if (newSkillRequest) {
       setSkillRequest(newSkillRequest)
       setIsModalOpen(true)
@@ -46,6 +50,7 @@ export const CreateSkillRequest = ({ currentUser }) => {
   return (
     <>
       <form className='createSkillReq flex' onSubmit={handleSubmit(submit)}>
+        {loading && <Loading />}
         <div
           className='titleCont flex
       '
