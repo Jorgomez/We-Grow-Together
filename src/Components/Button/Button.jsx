@@ -1,17 +1,25 @@
 import React from 'react'
 import './Button.css'
 import Tooltip from '../ToolTip/ToolTip'
-const Button = ({
+
+export const Button = ({
   className = 'button',
   fnc,
   children,
   imgSrc,
   altText,
-  TooltipTex
+  TooltipTex,
+  type,
+  disabled
 }) => {
   return (
     <Tooltip text={TooltipTex}>
-      <button className={className} onClick={fnc}>
+      <button
+        className={className}
+        onClick={fnc}
+        type={type}
+        disabled={disabled}
+      >
         {imgSrc && <img src={imgSrc} alt={altText} className='button-image' />}
         {children}
       </button>

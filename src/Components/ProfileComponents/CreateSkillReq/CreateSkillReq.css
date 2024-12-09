@@ -1,0 +1,204 @@
+.createSkillReq {
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  /* border: 1px solid; */
+  justify-self: center;
+}
+
+.titleCont h3 {
+  /* color: beige; */
+  font-size: var(--font-size-xl);
+  margin-bottom: 30px;
+}
+.createSkillReq .inputProfile label {
+  width: 110px;
+}
+.createSkillReq .inputProfile {
+  gap: 10%;
+}
+label {
+  color: black;
+  font-weight: 500;
+}
+
+.createSkillReq .inputProfile input {
+  width: 100%;
+  font-size: 13px;
+}
+
+.createSkillReq .inputProfile textarea {
+  font-size: 13px;
+
+  height: 80px;
+  width: 100%;
+}
+.createSkillReq .inputProfile select {
+  font-size: 13px;
+  width: 100%;
+}
+.inputPicture {
+  width: 85px !important;
+
+  border: none !important;
+}
+
+.buttonContain {
+  margin-top: 4%;
+}
+.inputPictureCont .input {
+  border-radius: var(--border-radius-s);
+  padding: var(--spacing-s);
+  border: 1px solid #ccc;
+  font-size: var(--font-size-ml);
+  transition: box-shadow 0.3s ease;
+  background-color: #f9f9f9b5;
+  height: 100%;
+}
+
+.inputPictureCont label {
+  font-size: 13px;
+  /* color: var(--text-color6); */
+  width: 110px;
+  font-weight: 500;
+  color: black !important;
+}
+#textTareaCont {
+  align-items: start !important;
+}
+
+.inputPictureCont {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+#checkbox {
+  margin-left: 15px;
+  margin-right: 5px;
+}
+.usePicture {
+  font-size: 12px !important;
+  color: black !important;
+}
+
+.button.cancelCreate {
+  background: grey;
+}
+
+input[type='file']:disabled::-webkit-file-upload-button {
+  background: rgba(128, 128, 128, 0.553);
+  color: #888;
+  cursor: not-allowed;
+  border: 1px solid #ddd;
+}
+
+input[type='file']::-webkit-file-upload-button {
+  width: 100%;
+}
+
+.createSkillReq .inputProfile .inputErrorCont {
+  width: 100%;
+  position: relative;
+}
+
+input[type='file'].inputinput-error {
+  outline: 1px solid red;
+  border-radius: var(--border-radius-s);
+}
+.inputErrorContPicture {
+  width: fit-content;
+  position: relative;
+}
+
+.errorMessagePicture {
+  font-size: 8px;
+  margin: 0;
+  margin-top: 3px;
+  width: fit-content;
+  color: red;
+  position: absolute;
+  top: 100%;
+
+  white-space: nowrap;
+}
+@media (max-width: 1200px) {
+  .titleCont h3 {
+    font-size: var(--font-size-l);
+  }
+}
+
+@media (max-width: 1000px) {
+}
+@media (max-width: 750px) {
+  .createSkillReq {
+    /* border: 1px solid; */
+    width: 85%;
+  }
+  .titleCont h3 {
+    font-size: var(--font-size-ml);
+  }
+
+  .createSkillReq .inputProfile input {
+    padding: var(--spacing-xs);
+    font-size: 12px;
+  }
+
+  .createSkillReq .inputProfile label {
+    font-size: 12px;
+  }
+
+  .createSkillReq .inputProfile select {
+    font-size: 12px;
+  }
+
+  .createSkillReq .inputProfile textarea {
+    font-size: 12px;
+    height: 70px;
+  }
+  .inputPictureCont label {
+    font-size: 12px !important;
+  }
+
+  .inputPictureCont .input {
+    font-size: 12px !important;
+  }
+  .buttonContain {
+    /* margin-top: 6%; */
+  }
+  .button.createSkillReq,
+  .button.cancelCreate {
+    width: fit-content;
+    padding: var(--spacing-s);
+    font-size: var(--font-size-m);
+  }
+}
+@media (max-width: 550px) {
+  .createSkillReq {
+    /* border: 1px solid; */
+    width: 90%;
+  }
+  .userDetails {
+    align-self: center;
+    /* border: 1px solid; */
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 12%;
+  }
+
+  label {
+    font-size: var(--font-size-m);
+  }
+  .inputProfile .input {
+    font-size: 13px;
+  }
+  .inputProfile .input::placeholder {
+    font-size: 10px;
+  }
+}
+@media (max-width: 380px) {
+}

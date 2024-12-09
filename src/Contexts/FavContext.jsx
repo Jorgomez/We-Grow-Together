@@ -1,14 +1,13 @@
 import React, { createContext, useState } from 'react'
-
 export const FavContext = createContext()
 
 export const FavProvider = ({ children }) => {
   const [likes, setLikes] = useState({})
 
-  const toggleLike = (userId) => {
+  const toggleLike = (skillRequestiD) => {
     setLikes((prevLikes) => ({
       ...prevLikes,
-      [userId]: !prevLikes[userId]
+      [skillRequestiD]: !prevLikes[skillRequestiD]
     }))
   }
 

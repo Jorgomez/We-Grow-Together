@@ -3,20 +3,43 @@
   flex-direction: column;
   padding-bottom: var(--spacing-xl);
 }
+
 .skillsPool > h2 {
   margin-top: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
   color: var(--background-color3);
   font-family: var(--hero-font-family);
   font-weight: 600;
-  font-size: 50px;
+  font-size: 60px;
 }
 .userCardsCont {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 40px;
   padding: 25px 0px 0px 0px;
   min-height: 70svh;
+}
+
+.loadMoreBtn {
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: var(--border-radius-l);
+  border: 1px solid #909090;
+  background-color: transparent;
+  width: 50px;
+  height: 40px;
+  padding-top: 6px;
+  padding-right: 3px;
+  padding-left: 3px;
+  /* padding: 5px; */
+}
+.noResultsMessage {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10%;
+  width: 70%;
+  text-align: center;
+  color: rgba(240, 248, 255, 0.46);
 }

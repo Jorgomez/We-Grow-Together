@@ -1,38 +1,57 @@
-import React, { useRef } from 'react'
-import InputField from '../InputField/InputField'
+import React from 'react'
 import Button from '../Button/Button'
 import Tooltip from '../ToolTip/ToolTip'
 import './MainSearch.css'
-import { toast } from 'react-toastify'
+import InputField from '../InputField/InputField'
+import { useForm } from 'react-hook-form'
+
+import { useSearch } from '../../Contexts/SearchContext'
+
+import { useNavigate } from 'react-router-dom'
 
 const MainSearch = () => {
-  const mainSearchValue = useRef(null)
   console.log('MainSerch, render')
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm()
+  const { searchTerm, setSearchTerm, setFieldtoFilter } = useSearch('')
+  const navigate = useNavigate()
 
-  const handleSearch = (e) => {
-    console.log(mainSearchValue.current.value)
-    toast.error(
-      `Santi/Manu, button disabled, I'm working on this functionality. `
-    )
+  const handleSearch = (data) => {
+    const valueMainSearch = data.mainSerchinput
+
+    if (valueMainSearch) {
+      setSearchTerm(valueMainSearch)
+      setFieldtoFilter('skillToTeach')
+      navigate('/SkillsPool')
+    }
   }
-  return (
-    <Tooltip text={'Santi/Manu, Functionality in progress'}>
-      <div className='mainSerchConteiner'>
-        <InputField
-          ref={mainSearchValue}
-          className='mainSearch'
-          placeholder='Search for skills...'
-          inputClassName={'mainSerchinput'}
-        />
+  console.log(searchTerm)
 
-        <Button
-          className='mainSerchButton'
-          fnc={handleSearch}
-          imgSrc='https://res.cloudinary.com/digcf0lad/image/upload/v1730050946/search_elqrbo.png'
-          TooltipTex={'Functionality in progress'}
-        ></Button>
-      </div>
-    </Tooltip>
+  return (
+    <form className='mainSerchConteiner' onSubmit={handleSubmit(handleSearch)}>
+      <InputField
+        className='mainSearch'
+        placeholder='Search for a skill to learn'
+        inputClassName={'mainSerchinput'}
+        {...register('mainSerchinput', {
+          required: 'Write what you would to learn here.'
+        })}
+      />
+
+      <Button
+        className='mainSerchButton'
+        fnc={handleSearch}
+        imgSrc='https://res.cloudinary.com/digcf0lad/image/upload/v1730050946/search_elqrbo.png'
+      ></Button>
+      {errors.mainSerchinput && (
+        <p className='errorMessageMainSearch'>
+          {errors.mainSerchinput.message}
+        </p>
+      )}
+    </form>
   )
 }
 

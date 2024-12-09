@@ -5,13 +5,13 @@ import Logo from '../Header/Logo/Logo'
 
 export const SwitcherForm = () => {
   console.log('Swhitcher Rander')
-  const { isLogin, toggleLogin } = useContext(AuthContext)
+  const { isRegistered, toggleLogin } = useContext(AuthContext)
 
   return (
     <article
-      className={isLogin ? 'artLogin' : 'artReg'}
+      className={isRegistered ? 'artLogin' : 'artReg'}
       style={{
-        backgroundImage: isLogin
+        backgroundImage: isRegistered
           ? `url('https://res.cloudinary.com/digcf0lad/image/upload/v1730026023/Background_Image_1_vcjlfr.webp')`
           : `url('https://res.cloudinary.com/digcf0lad/image/upload/v1727533147/18a4e9bd9160b9fd063c2d8ff65121d6_fj5g5p.jpg')`,
         backgroundSize: 'cover',
@@ -21,9 +21,11 @@ export const SwitcherForm = () => {
       {' '}
       <div className='switchertTP'>
         <Logo />
-        <h3 className='switchert'>{isLogin ? 'Welcome Back' : 'Join Us'}</h3>
+        <h3 className='switchert'>
+          {isRegistered ? 'Welcome Back' : 'Join Us'}
+        </h3>
         <div className='switcherP'>
-          {isLogin ? (
+          {isRegistered ? (
             <>
               <p>
                 Log in to create your event, see what your friends are up to,
@@ -46,7 +48,7 @@ export const SwitcherForm = () => {
         </div>
         <Button
           fnc={toggleLogin}
-          children={isLogin ? 'Go to Register' : 'Go to Login'}
+          children={isRegistered ? 'Go to Register' : 'Go to Login'}
         />
       </div>
     </article>

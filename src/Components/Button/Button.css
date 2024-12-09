@@ -1,7 +1,7 @@
 button {
   cursor: pointer;
   /* background: linear-gradient(100deg, #40585e, #2193b0); */
-  background: linear-gradient(100deg, #355e3b, #4b6f44, #7c9d70);
+  background: linear-gradient(100deg, #355e3b, #385232, #7c9d70);
 }
 
 .button {
@@ -34,6 +34,10 @@ button:hover {
 }
 .button:hover {
   transform: translateY(-3px);
+}
+
+button:disabled {
+  background: grey !important;
 }
 
 @media (max-width: 950px) {

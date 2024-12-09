@@ -1,28 +1,47 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Tooltip from '../ToolTip/ToolTip'
-import { FavContext } from '../../Contexts/FavContext'
+// import { FavContext } from '../../Contexts/FavContext'
 import { AuthContext } from '../../Contexts/AuthContext'
 import { toast } from 'react-toastify'
+import {
+  handleDislike,
+  handlelike
+} from '../../utils/Functions/requestHandlers/likesHandlers'
+import { like } from '../../utils/API/Requests/genericRequest/like'
 
-const LikeButton = ({ user, className, tooltipTex }) => {
-  console.log(`rander likebuTTON id:${user.id}`)
-  const { likes, toggleLike } = useContext(FavContext)
-  const isLiked = likes[user.id] || false
-  const { userInfo } = useContext(AuthContext)
-  const handleClick = () => {
-    toggleLike(user.id)
+const LikeButton = ({ skillRequest, className, tooltipTex }) => {
+  console.log(`rander likebuTTON id:${skillRequest.id}`)
+  const [isLiked, setIsliked] = useState(false)
+  const { currentUser } = useContext(AuthContext)
 
-    !isLiked
-      ? toast.success(`${user.name.split(' ')[0]} added to your Favorites `)
-      : toast.error(`Removed ${user.name.split(' ')[0]},from Favorites`)
-
-    console.log('user liekd', user)
+  const toggleLike = () => {
+    setIsliked(!isLiked)
   }
+
+  useEffect(() => {
+    if (currentUser?.user?.likes?.includes(skillRequest.id)) {
+      setIsliked(true)
+    }
+  }, [currentUser, skillRequest.id])
+
+  const handleClick = async () => {
+    if (!currentUser) {
+      toast.error('You need to be logged in to like items.')
+      return
+    }
+    !isLiked
+      ? await handlelike(toggleLike, skillRequest, currentUser)
+      : handleDislike(toggleLike, skillRequest, currentUser)
+  }
+
+  //   : toast.error(
+  //       `Removed ${skillRequest.name.split(' ')[0]}, from Favorites`
+  //     )
 
   return (
     <Tooltip
       text={
-        userInfo
+        currentUser
           ? isLiked
             ? 'Click to dislike'
             : 'Click to add Favorites'
@@ -30,7 +49,7 @@ const LikeButton = ({ user, className, tooltipTex }) => {
       }
     >
       <img
-        onClick={userInfo && handleClick}
+        onClick={currentUser && handleClick}
         className={className}
         src={
           isLiked

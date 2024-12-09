@@ -1,26 +1,41 @@
-import { createContext, useReducer, useState } from 'react'
+import { createContext, useEffect, useReducer, useState } from 'react'
 
 export const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
-  const [isLogin, setIsLogin] = useState(false)
-  const [userInfo, setUserInfo] = useState(null)
+  const [isRegistered, setIsRegistered] = useState(false)
+  const [currentUser, setCurrentUser] = useState(null)
 
-  const toggleLogin = () => setIsLogin((prev) => !prev)
-
-  const registerUser = (userData) => {
-    setUserInfo(userData)
-    setIsLogin(true)
+  useEffect(() => {
+    const userLocalStorage = localStorage.getItem('user')
+    if (userLocalStorage) {
+      setCurrentUser(JSON.parse(userLocalStorage))
+      setIsRegistered(true)
+    }
+  }, [])
+  const handleAuthSuccess = (userData) => {
+    localStorage.setItem('user', JSON.stringify(userData))
+    setCurrentUser(userData)
+    setIsRegistered(true)
   }
 
-  // const logoutUser = () => {
-  //   setUser(null);
-  //   setIsLogin(false);
-  // };
+  const logout = () => {
+    localStorage.clear()
+    setCurrentUser(null)
+    setIsRegistered(false)
+  }
+
+  const toggleLogin = () => setIsRegistered((prev) => !prev)
 
   return (
     <AuthContext.Provider
-      value={{ isLogin, toggleLogin, userInfo, registerUser }}
+      value={{
+        isRegistered,
+        toggleLogin,
+        currentUser,
+        handleAuthSuccess,
+        logout
+      }}
     >
       {children}
     </AuthContext.Provider>

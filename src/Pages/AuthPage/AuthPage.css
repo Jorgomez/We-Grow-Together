@@ -5,7 +5,7 @@
 .auth-Section {
   display: flex;
   justify-content: center;
-  background-color: var(--background-color6);
+  background-color: rgba(128, 128, 128, 0.284);
   display: flex;
   min-height: 60svh;
   width: 50%;
@@ -13,6 +13,7 @@
   border-radius: var(--spacing-l);
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.203);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: beige;
 }
 .auth-Section:hover {
   box-shadow: 15px 15px 25px rgba(0, 0, 0, 1);
@@ -82,6 +83,13 @@
 .input.input-error {
   border: 1px solid red;
   outline: none;
+}
+.errorMessage {
+  color: red;
+  text-align: center;
+
+  width: 220px;
+  font-size: var(--font-size-m);
 }
 
 @media (max-width: 1100px) {

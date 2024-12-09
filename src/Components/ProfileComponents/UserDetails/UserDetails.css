@@ -1,0 +1,233 @@
+.userDetails {
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+/* * {
+  color: black;
+} */
+
+.heroProfileCont {
+  /* border: 1px solid; */
+  width: 80% !important;
+  padding-top: var(--spacing-m);
+  padding-bottom: var(--spacing-xxl);
+  gap: 10%;
+  position: relative;
+  align-items: center;
+  /* color: seashell; */
+}
+
+.inputFileButton {
+  position: absolute;
+  bottom: -20px;
+
+  display: flex;
+  text-align: center;
+}
+
+.input::placeholder {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.383);
+  font-style: italic;
+}
+
+.inputProfilePicutre input[type='file'] {
+  width: 80%;
+}
+.inputProfilePicutre input[type='file']::-webkit-file-upload-button {
+  width: 100%;
+}
+
+.inputProfile {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-s);
+  align-items: center;
+}
+.errorMessage {
+  font-size: 10px;
+}
+
+.inputProfile .input {
+  border-radius: var(--border-radius-s);
+  padding: var(--spacing-s);
+  border: 1px solid #ccc;
+  font-size: var(--font-size-ml);
+  transition: box-shadow 0.3s ease;
+  background-color: #f9f9f9b5;
+  height: 100%;
+  /* font-weight: 500; */
+}
+
+.inputProfile label {
+  font-size: 13px;
+  color: var(--text-color6);
+  width: 90px;
+  color: black;
+  font-weight: 500;
+}
+
+.regDateCont {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-m);
+  align-items: center;
+}
+.regDateCont .label {
+  font-size: 13px;
+  color: var(--text-color6);
+  width: 90px;
+  color: black;
+  font-weight: 500;
+}
+
+.regDateCont .date {
+  border-radius: var(--border-radius-s);
+  padding: var(--spacing-s);
+  font-size: var(--font-size-ml);
+  transition: box-shadow 0.3s ease;
+  background-color: #f9f9f9b5;
+
+  height: 100%;
+  width: 180px;
+}
+
+.button.editUser,
+.button.cancelEdit {
+  padding: var(--spacing-s);
+  width: fit-content;
+}
+
+.button.cancelEdit {
+  background: grey;
+}
+
+.inputErrorCont {
+  /* height: 100%; */
+  position: relative;
+}
+
+.inputProfilePicutre .input.input-error {
+  outline: none;
+  border: none;
+}
+.errorMessageProfile {
+  font-size: 10px;
+  margin: auto;
+  margin-top: 3px;
+
+  color: red;
+}
+
+.inputProfilePicutre #profilePicture-error {
+  position: absolute;
+  bottom: 0;
+  left: 75%;
+  margin: auto;
+}
+button:disabled {
+  background-color: grey !important;
+}
+
+@media (max-width: 1200px) {
+  .heroProfileCont {
+    padding-top: var(--spacing-s);
+    padding-bottom: var(--spacing-l);
+  }
+
+  .userProfileImg {
+    max-width: 110px;
+    max-height: 110px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .userDetails {
+    height: 100%;
+
+    gap: 9px;
+    margin-top: 3%;
+  }
+  .heroProfileCont h2 {
+    font-size: var(--font-size-l);
+  }
+
+  .userProfileImg {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .inputProfile .input {
+    padding: var(--spacing-xs);
+    font-size: 13px;
+  }
+
+  .inputProfile label {
+    font-size: 12px;
+  }
+
+  .regDateCont .label {
+    font-size: 12px;
+  }
+
+  .regDateCont .date {
+    padding: var(--spacing-xs);
+    font-size: 13px;
+    width: 153px;
+  }
+
+  .inputProfile .input::placeholder {
+    font-size: 10px;
+  }
+}
+@media (max-width: 750px) {
+  .userDetails {
+    width: 80%;
+  }
+  .userProfileImg {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  .heroProfileCont h2 {
+    font-size: var(--font-size-ml);
+  }
+  .button.editUser,
+  .button.cancelEdit {
+    padding: var(--spacing-s);
+    font-size: var(--font-size-m);
+  }
+}
+@media (max-width: 550px) {
+  .userDetails {
+    height: 100%;
+    flex-direction: column;
+    margin-top: 0px !important;
+  }
+
+  .heroProfileCont h2 {
+    font-size: var(--font-size-ml);
+  }
+  .heroProfileCont {
+    width: 80%;
+    gap: 20%;
+  }
+  .userProfileImg {
+    max-width: 75px;
+    max-height: 75px;
+  }
+  label {
+    font-size: var(--font-size-m);
+  }
+  .inputProfile .input {
+    font-size: 13px;
+  }
+  .inputProfile .input::placeholder {
+    font-size: 10px;
+  }
+}
+@media (max-width: 380px) {
+}

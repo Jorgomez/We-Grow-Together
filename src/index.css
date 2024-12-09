@@ -58,17 +58,18 @@
 }
 
 body {
-  /* background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1730928715/pawel-czerwinski-zLqn9F9JsIA-unsplash_vvwiwr.webp'); */
-  /* background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1727099077/project10/posters/tt9mqiah8x7nlcoxzrwo.jpg'); */
-  background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1727098638/project10/posters/cfncenwtkxmxtg5zc8f1.jpg');
-  background-size: cover;
+  /* background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1730928715/pawel-czerwinski-zLqn9F9JsIA-unsplash_vvwiwr.webp') !important; */
+  /* background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1727099077/project10/posters/tt9mqiah8x7nlcoxzrwo.jpg') !important; */
+  /* background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1727098638/project10/posters/cfncenwtkxmxtg5zc8f1.jpg') !important; */
+  background-image: url('https://res.cloudinary.com/digcf0lad/image/upload/v1733688943/chris-appano--sTwytNnqWw-unsplash_r6opla.jpg') !important;
+  background-size: cover !important;
   position: relative;
 }
 
 .home,
 .authPage,
 .skillsPool,
-.favorites {
+.profile {
   display: flex;
   /* justify-content: center; */
   align-items: center;

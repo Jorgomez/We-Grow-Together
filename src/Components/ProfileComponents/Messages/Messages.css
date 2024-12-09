@@ -1,0 +1,128 @@
+.headerMsg {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  font-size: 13px;
+}
+
+.senderImg {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* .replyMessage p {
+  text-align: right;
+} */
+
+.messages {
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(245, 245, 245, 0.331);
+  border-left: 1px solid rgba(245, 245, 245, 0.331);
+  position: relative;
+}
+
+.receivedMessageCont {
+  border-radius: 15px;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px;
+  word-wrap: break-word;
+}
+.originalMessageCont {
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.receivedMessage,
+.replyMessage {
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 70%;
+  background-color: #f9f9f9;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  white-space: normal;
+  border-radius: 15px;
+}
+.messages .loadingContainer {
+  position: relative !important;
+  margin: auto;
+}
+.replyMessageCont {
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.replyMessage p {
+  text-align: right;
+}
+
+.replyInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.replyTextarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  min-height: 80px;
+  resize: vertical;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.sendReplyButton {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sendReplyButton:hover {
+  background: linear-gradient(135deg, #1d82a3, #5cc0e5);
+}
+
+@media (max-width: 1000px) {
+  /* .receivedMessage p,
+  .replyMessage p {
+    font-size: 13px;
+  } */
+
+  .messages {
+    font-size: 13px;
+  }
+
+  .headerMsg {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .messages {
+    font-size: 13px;
+    border-right: none;
+    border-left: none;
+  }
+}

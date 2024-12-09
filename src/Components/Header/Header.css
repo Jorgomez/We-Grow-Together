@@ -8,20 +8,30 @@ header {
   padding-right: 7%;
   padding-left: 7%;
 }
-
+.logoNavCont {
+  height: 70%;
+  /* border: 1px solid; */
+  width: 35%;
+  display: flex;
+  align-items: center;
+  /* background-color: rgba(128, 128, 128, 0.284); */
+  border-radius: var(--border-radius-s);
+}
 .logo {
   padding-left: var(--spacing-m);
 }
 
 nav {
-  width: 85%;
+  /* border: 1px solid; */
+  justify-self: start;
+  width: 90%;
 }
 
 nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-ml);
 }
 .nav a {
   color: var(--text-color1);
@@ -39,6 +49,55 @@ nav ul {
 .active {
   border-bottom: 1px solid white;
 }
+.notification {
+  display: flex;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 120px;
+  height: fit-content;
+  z-index: 10;
+  cursor: pointer;
+  background: linear-gradient(100deg, #40585ec5, #2193b0a9);
+  border-radius: var(--border-radius-s);
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.535);
+}
+
+.notification p {
+  color: white;
+  font-size: 13px;
+  /* margin: auto; */
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .logoNavCont {
+    width: 45%;
+  }
+}
+
+@media (max-width: 900px) {
+  .logoNavCont {
+    width: 50%;
+
+    font-size: var(--font-size-m);
+  }
+
+  .logoNavCont li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 700px) {
+  .logoNavCont {
+    width: 60%;
+  }
+
+  .logoNavCont li {
+    font-size: 13px;
+  }
+}
 @media (max-width: 600px) {
   .nav {
     display: none;
@@ -55,9 +114,15 @@ nav ul {
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 10;
     cursor: pointer;
-    background: linear-gradient(100deg, #40585ec5, #2193b0a9);
-    border-radius: var(--border-radius-s);
+    background: linear-gradient(100deg, #28606ec5, #2193b0a9);
+    border-radius: var(--border-radius-m);
     margin-right: var(--spacing-m);
+  }
+  .logoNavCont {
+    border: none;
+    width: fit-content;
+    background-color: transparent;
+    height: 70%;
   }
 
   .navOpen > ul {

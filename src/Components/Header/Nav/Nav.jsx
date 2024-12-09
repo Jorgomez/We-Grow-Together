@@ -5,8 +5,7 @@ import { AuthContext } from '../../../Contexts/AuthContext'
 
 const Nav = ({ isMobile, closeMenu }) => {
   console.log('Nav, Render')
-  const { isLogin, userInfo } = useContext(AuthContext)
-
+  const { isRegistered, currentUser, logout } = useContext(AuthContext)
   const menuRef = useRef(null)
   useClickOutside(menuRef, closeMenu)
   return (
@@ -22,20 +21,26 @@ const Nav = ({ isMobile, closeMenu }) => {
             Skills Pool
           </NavLink>
         </li>
-        {userInfo && (
-          <li>
-            <NavLink to='/Favorites' onClick={closeMenu}>
-              Favorites
+
+        {currentUser && (
+          <li className='flex' style={{ gap: '20px' }}>
+            <NavLink to='/Profile' onClick={closeMenu}>
+              {currentUser.user.name.split(' ')[0].charAt(0).toUpperCase() +
+                currentUser.user.name.split(' ')[0].slice(1).toLowerCase()}
             </NavLink>
           </li>
         )}
         <li>
-          <NavLink to='/Register' onClick={closeMenu}>
-            {isLogin
-              ? userInfo
-                ? userInfo.userName.split(' ')[0]
-                : 'Login'
-              : 'Register'}
+          <NavLink
+            to='/Register'
+            onClick={() => {
+              if (isRegistered && currentUser) {
+                logout()
+              }
+              closeMenu()
+            }}
+          >
+            {isRegistered ? (currentUser ? 'Logout' : 'Login') : 'Register'}
           </NavLink>
         </li>
       </ul>

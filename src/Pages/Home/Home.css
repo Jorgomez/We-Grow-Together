@@ -2,6 +2,7 @@
   display: flex;
   justify-content: baseline;
   width: 100%;
+  overflow: hidden;
 }
 
 .hero-text {
@@ -16,7 +17,22 @@
   transform-origin: center;
   line-height: 0.8;
   text-shadow: 5px 5px 15px rgba(188, 177, 177, 0.936);
+  position: relative;
+  z-index: 1000;
 }
+
+.abstract {
+  position: absolute;
+  width: 550px;
+  height: 500px;
+  right: 0;
+  bottom: 0px;
+}
+
+.abstract img {
+  width: 100%;
+}
+
 @media (max-width: 900px) {
   .hero-text {
     width: 350px;
@@ -40,6 +56,14 @@
     width: 150px;
     font-size: 3rem;
     transform: rotate(0deg);
+    text-shadow: 5px 5px 15px rgba(188, 177, 177, 0.571);
+  }
+  .abstract {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: 60px;
+    bottom: -30px;
   }
 }
 @media (max-width: 450px) {
