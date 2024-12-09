@@ -80,5 +80,5 @@ The frontend is fully integrated with the backend to ensure a seamless experienc
 
 # Important URLs
 
-Frontend: https://growtogetha.netlify.app
+Frontend: https://wegrowtogether.netlify.app/Register
 API Backend: https://project-13-backend.vercel.app
