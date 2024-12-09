@@ -64,7 +64,7 @@ export const UserDetails = ({ currentUser }) => {
         errorClassname='errorMessageProfile'
         inputName='name'
         value={currentUser?.user.name}
-        {...register('name', validationName)}
+        {...register('name')}
       />
       <InputField
         className={'inputProfile'}
