@@ -73,8 +73,6 @@ export const useCreateSkillReq = () => {
         }
 
         return response
-
-        // navigate('/SkillsPool')
       }
     } catch (error) {
       console.error('Error in submitCreateSkillReq:', error)

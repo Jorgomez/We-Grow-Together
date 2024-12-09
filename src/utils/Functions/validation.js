@@ -1,7 +1,7 @@
 export const validationName = {
   pattern: {
-    value: /^[a-zA-Z]+(\s+[a-zA-Z]+)+$/,
-    message: 'Please enter first and last name  '
+    value: /^[A-Za-zÁ-Ýá-ý]+\s[A-Za-zÁ-Ýá-ý]+\s*$/,
+    message: 'Please enter first and last name'
   },
   required: 'This field is required'
 }
@@ -67,8 +67,8 @@ export const validationMessage = {
 
 export const validationNameProfile = {
   pattern: {
-    value: /^[a-zA-Z]+\s[a-zA-Z]+$/,
-    message: 'Name need a space between'
+    value: /^[A-Za-zÁ-Ýá-ý]+\s[A-Za-zÁ-Ýá-ý]+\s*$/,
+    message: 'Please enter first and last name'
   }
 }
 

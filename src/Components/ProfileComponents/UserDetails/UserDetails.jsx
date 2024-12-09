@@ -9,7 +9,6 @@ import { useUpdateUser } from '../../../utils/Functions/requestHandlers/updateUs
 import {
   validationAge,
   validationEmailProfile,
-  validationName,
   validationNameProfile,
   validationPlace,
   validationSkillProfile
@@ -25,19 +24,9 @@ export const UserDetails = ({ currentUser }) => {
     handleSubmit,
     formState: { errors },
     reset
-    // getValues
   } = useForm()
 
   const update = async (data) => {
-    // const currentValues = getValues()
-    // const hasChanges = Object.keys(defaultValues).some(
-    //   (key) => currentValues[key] !== defaultValues[key]
-    // )
-
-    // if (!hasChanges) {
-    //   toast.error('No changes detected. Please update at least one field.')
-    //   return
-    // }
     setLoading(true)
     const response = await submitUpdated(data)
     setLoading(false)
@@ -64,7 +53,7 @@ export const UserDetails = ({ currentUser }) => {
         errorClassname='errorMessageProfile'
         inputName='name'
         value={currentUser?.user.name}
-        {...register('name')}
+        {...register('name', validationNameProfile)}
       />
       <InputField
         className={'inputProfile'}

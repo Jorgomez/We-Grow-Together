@@ -38,10 +38,12 @@
   position: absolute;
   top: 100%;
   margin: auto;
-  color: red;
+  color: white;
   font-size: 15px;
   margin-top: 4px;
   white-space: nowrap;
+
+  z-index: 1000;
 }
 
 @media (max-width: 850px) {

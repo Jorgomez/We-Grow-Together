@@ -59,11 +59,10 @@
     text-shadow: 5px 5px 15px rgba(188, 177, 177, 0.571);
   }
   .abstract {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    right: 60px;
-    bottom: -30px;
+    width: 350px;
+
+    right: 100px;
+    top: 50px;
   }
 }
 @media (max-width: 450px) {

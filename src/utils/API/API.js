@@ -1,4 +1,5 @@
-const baseURL = 'https://project-13-backend-s1s1.vercel.app'
+const baseURL = 'https://project-13-backend.vercel.app'
+
 export const API = async ({
   endpoint,
   method = 'GET',

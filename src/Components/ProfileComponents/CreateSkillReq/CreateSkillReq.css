@@ -17,8 +17,9 @@
 .createSkillReq .inputProfile {
   gap: 10%;
 }
-label {
+.createSkillReq label {
   color: black;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -123,6 +124,9 @@ input[type='file'].inputinput-error {
 
   white-space: nowrap;
 }
+.chakra-modal__body.css-qlig70 .nameUserCard {
+  color: black !important;
+}
 @media (max-width: 1200px) {
   .titleCont h3 {
     font-size: var(--font-size-l);
@@ -174,8 +178,11 @@ input[type='file'].inputinput-error {
     font-size: var(--font-size-m);
   }
 }
+
 @media (max-width: 550px) {
   .createSkillReq {
+    padding-top: 100px;
+
     /* border: 1px solid; */
     width: 90%;
   }

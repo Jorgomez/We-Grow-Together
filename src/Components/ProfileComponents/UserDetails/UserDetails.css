@@ -5,19 +5,14 @@
   position: relative;
   width: 100%;
 }
-/* * {
-  color: black;
-} */
 
 .heroProfileCont {
-  /* border: 1px solid; */
   width: 80% !important;
   padding-top: var(--spacing-m);
   padding-bottom: var(--spacing-xxl);
   gap: 10%;
   position: relative;
   align-items: center;
-  /* color: seashell; */
 }
 
 .inputFileButton {
@@ -59,7 +54,6 @@
   transition: box-shadow 0.3s ease;
   background-color: #f9f9f9b5;
   height: 100%;
-  /* font-weight: 500; */
 }
 
 .inputProfile label {
@@ -203,9 +197,10 @@ button:disabled {
 }
 @media (max-width: 550px) {
   .userDetails {
-    height: 100%;
+    /* margin-top: 500px !important; */
+    /* height: 100%; */
     flex-direction: column;
-    margin-top: 0px !important;
+    /* margin-top: 0px !important; */
   }
 
   .heroProfileCont h2 {
