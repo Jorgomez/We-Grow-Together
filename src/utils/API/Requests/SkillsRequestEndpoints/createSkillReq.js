@@ -3,6 +3,8 @@ import { API } from '../../API'
 export const createSkllReq = async (formData, currentUser) => {
   const token = currentUser.token
 
+  console.log(token)
+
   try {
     const response = await API({
       endpoint: '/skillRequests/',
