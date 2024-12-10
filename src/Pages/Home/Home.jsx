@@ -12,7 +12,7 @@ const Home = () => {
 
       <div className='abstract'>
         <img
-          src='https://res.cloudinary.com/digcf0lad/image/upload/v1733686541/Group_24_qtstyg.png'
+          src='https://res.cloudinary.com/digcf0lad/image/upload/v1733837033/Group_24_v4jjbo.webp'
           alt=''
         />
       </div>
