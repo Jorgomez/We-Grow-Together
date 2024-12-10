@@ -28,18 +28,23 @@ export const SwitcherForm = () => {
           {isRegistered ? (
             <>
               <p>
-                Log in to create your event, see what your friends are up to,
-                and join the excitement in your city.
+                Log in to share your skills, learn something new, and connect
+                with a community of passionate learners.
               </p>
 
-              <p className='switcherP-final'>Not registered? Join Us</p>
+              <p className='switcherP-final'>
+                Not registered? Join Us and start your skill exchange journey
+                today!
+              </p>
             </>
           ) : (
             <>
               <p>
-                Connect with people who share your interests. Create and join
-                events around you, and start building your community today.
+                Connect with people who want to teach and learn. Share your
+                skills, discover new talents, and grow together in a
+                collaborative community.
               </p>
+
               <p className='switcherP-final'>
                 If you are registered, go to Login.
               </p>
