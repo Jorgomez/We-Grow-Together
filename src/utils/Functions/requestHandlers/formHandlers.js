@@ -60,7 +60,8 @@ export const useRegister = () => {
           } else {
             toast.success(
               `Welcome ${
-                responseLogin.user.name.split(' ')[0]
+                responseLogin.user.name.split(' ')[0].charAt(0).toUpperCase() +
+                responseLogin.user.name.split(' ')[0].slice(1).toLowerCase()
               }, you're  successfully Registered and loged`
             )
             handleAuthSuccess(responseLogin)
@@ -94,7 +95,8 @@ export const useLogin = () => {
       } else {
         toast.success(
           `Welcome ${
-            response.user.name.split(' ')[0]
+            response.user.name.split(' ')[0].charAt(0).toUpperCase() +
+            response.user.name.split(' ')[0].slice(1).toLowerCase()
           }, you're successfully login`
         )
 

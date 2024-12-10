@@ -124,7 +124,7 @@ export const UserCard = ({ skillRequest }) => {
                 <img
                   src='https://res.cloudinary.com/digcf0lad/image/upload/v1732146536/student_2_gqpvg6.png'
                   alt='Remote'
-                  style={{ marginRight: '8px' }} // Añade espacio entre las imágenes
+                  style={{ marginRight: '8px' }}
                 />
                 <img
                   src='https://res.cloudinary.com/digcf0lad/image/upload/v1732187964/happy-children_5_nlic9h.png'

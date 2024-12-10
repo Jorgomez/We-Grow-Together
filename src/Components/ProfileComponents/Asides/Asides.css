@@ -6,19 +6,27 @@
   width: 25%;
 }
 .left h3 {
-  /* color: whitesmoke; */
+  color: beige;
 }
 .iconAside {
   width: 20px;
   height: 20px;
 }
+
+.right h4 {
+  color: beige;
+  font-weight: 500;
+  font-size: var(--font-size-ml);
+}
 .iconAsideRight {
-  height: 50px;
-  width: 50px;
+  margin-top: 20px;
+  height: 40px;
+  width: 40px;
 }
 .profileOptionsCont {
   width: 60%;
   gap: 15px;
+  color: beige;
 }
 .profileActionsCont {
   flex-direction: column;
@@ -73,6 +81,7 @@ li {
   width: 120%;
   font-size: 13px;
   font-weight: 500;
+  color: black;
 }
 
 .messageItem {
@@ -117,7 +126,9 @@ li {
 }
 
 .deleteAccount {
-  color: black;
+  font-size: var(--font-size-ml);
+  font-weight: 500;
+  color: beige;
 }
 
 @media (max-width: 1000px) {

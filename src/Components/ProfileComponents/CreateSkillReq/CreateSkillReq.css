@@ -7,20 +7,21 @@
 }
 
 .titleCont h3 {
-  /* color: beige; */
+  color: beige;
   font-size: var(--font-size-xl);
   margin-bottom: 30px;
 }
 .createSkillReq .inputProfile label {
   width: 110px;
+  color: beige;
 }
 .createSkillReq .inputProfile {
   gap: 10%;
 }
 .createSkillReq label {
-  color: black;
   font-size: 12px;
   font-weight: 500;
+  color: beige;
 }
 
 .createSkillReq .inputProfile input {
@@ -59,10 +60,10 @@
 
 .inputPictureCont label {
   font-size: 13px;
-  /* color: var(--text-color6); */
+
   width: 110px;
   font-weight: 500;
-  color: black !important;
+  color: beige !important;
 }
 #textTareaCont {
   align-items: start !important;
@@ -81,7 +82,6 @@
 }
 .usePicture {
   font-size: 12px !important;
-  color: black !important;
 }
 
 .button.cancelCreate {
@@ -121,12 +121,9 @@ input[type='file'].inputinput-error {
   color: red;
   position: absolute;
   top: 100%;
-
   white-space: nowrap;
 }
-.chakra-modal__body.css-qlig70 .nameUserCard {
-  color: black !important;
-}
+
 @media (max-width: 1200px) {
   .titleCont h3 {
     font-size: var(--font-size-l);
