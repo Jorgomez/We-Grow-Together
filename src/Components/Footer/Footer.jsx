@@ -19,7 +19,7 @@ export const Footer = () => {
         <Tooltip text={`Founder's Linkedin  `}>
           <li>
             <a
-              href='https://www.linkedin.com/in/jorge-g%C3%B3mez-m%C3%A9ndezz-5a7524a1/'
+              href='www.linkedin.com/in/jorgomezm'
               target='_blank'
               rel='noopener noreferrer'
             >
